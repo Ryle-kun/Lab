@@ -1,59 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lategram</title>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <style>
-    html, body, h1, h2, h3, h4, h5, p {
-      font-family: "Open Sans", sans-serif;
-    }
-    body {
-      background-color: #191414; 
-      color: #ffffff; 
-    }
-    .LG-theme-l5 { background-color: #191414; color: #ffffff; }
-    .LG-theme-l4 { background-color: #1db954; color: #ffffff; } 
-    .LG-theme-l3 { background-color: #1ed760; color: #ffffff; } 
-    .LG-theme-l2 { background-color: #1db954; color: #ffffff; }
-    .LG-theme-l1 { background-color: #1db954; color: #ffffff; }
-    .LG-theme-d1 { background-color: #1db954; color: #ffffff; }
-    .LG-theme-d2 { background-color: #1db954; color: #ffffff; }
-    .LG-theme-d3 { background-color: #1db954; color: #ffffff; }
-    .LG-theme-d4 { background-color: #1db954; color: #ffffff; }
-    .LG-theme-d5 { background-color: #1db954; color: #ffffff; }
-    .LG-theme-light { background-color: #191414; color: #ffffff; }
-    .LG-theme-dark { background-color: #191414; color: #ffffff; }
-    .LG-theme-action { background-color: #1db954; color: #ffffff; }
-    .LG-theme { background-color: #1db954; color: #ffffff; }
-    .LG-text-theme { color: #1db954; }
-    .LG-border-theme { border-color: #1db954; }
-    .LG-hover-theme:hover { background-color: #1db954; color: #ffffff; }
-    .LG-hover-text-theme:hover { color: #1db954; }
-    .LG-hover-border-theme:hover { border-color: #1db954; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            background: #4CAF50;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            font-size: 18px;
+            cursor: pointer;
+            position: relative;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .logo i {
+            font-size: 22px;
+        }
+        .notification {
+            position: relative;
+        }
+        .notification .badge {
+            background: yellow;
+            color: black;
+            font-size: 12px;
+            border-radius: 50%;
+            padding: 2px 6px;
+            position: absolute;
+            top: -5px;
+            right: -10px;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+        .profile img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+        }
+    </style>
 </head>
-<nav class="w3-top">
-  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Lategram</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
-      <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
-        <a href="#" class="w3-bar-item w3-button">One new friend request</a>
-        <a href="#" class="w3-bar-item w3-button">John Doe posted on your wall</a>
-        <a href="#" class="w3-bar-item w3-button">Jane likes your post</a>
-      </div>
-    </div>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
-      <!-- Image placeholder -->
-      <img src="path_to_avatar_image" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
-    </a>
-  </div>
-</nav>
+<body>
+
+    <nav>
+        <ul>
+            <li class="logo">
+                <i class="fa fa-home"></i> Lategram
+            </li>
+            <li><i class="fa fa-globe" title="News"></i></li>
+            <li><i class="fa fa-user" title="Account Settings"></i></li>
+            <li><i class="fa fa-envelope" title="Messages"></i></li>
+            <li class="notification">
+                <i class="fa fa-bell" title="Notifications"></i>
+                <span class="badge">3</span>
+            </li>
+        </ul>
+        <ul>
+            <li class="profile">
+                <img src="C:\Users\Edwin\Downloads\images.jpg" alt="Avatar">
+            </li>
+        </ul>
+    </nav>
+
+</body>
+</html>
