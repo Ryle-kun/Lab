@@ -42,6 +42,12 @@ nav ul {
     padding: 0px;
 }
 
+.profile {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
 nav ul li {
     display: flex;
     align-items: center;
@@ -72,7 +78,7 @@ nav ul li a {
 }
 
 .user a i {
-    font-size: 20px; 
+    font-size: 25px; 
 }
 
 nav ul li.user {
@@ -93,7 +99,7 @@ nav ul li.user {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     display: none;
     z-index: 1000;
-    padding: 0;
+    padding: 10;
     flex-direction: column;
 }
 
@@ -118,7 +124,6 @@ nav ul li:hover {
     background-color: white;
 }
 
-nav ul li:hover a,
 nav ul li:hover a i {
     color: black;
 }
